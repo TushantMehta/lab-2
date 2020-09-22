@@ -1,0 +1,16 @@
+.layout {
+    background-color: azure;
+}
+
+#heading {
+    text-align: center;
+    font-style: italic;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+td {
+    
+    padding-right: 40px;
+    padding-top: 5px;
+}
