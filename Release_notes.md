@@ -14,3 +14,10 @@
 ## 0.2
     -added a button in lab2-tme-76.html to clear the Todo List
     -added two functions in js/features.js for clearing TodoTable and session storage of saved Tasks 
+
+
+
+## 0.3
+    -added function deleteTodoItem() to js/features.js 
+    -added delete button to each saved task storage
+    
