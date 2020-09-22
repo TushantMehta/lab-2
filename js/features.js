@@ -95,12 +95,26 @@ function displayTodoList()  {
 
         
 
-        //Add the cells to the row
-        todoRow.appendChild(nameCell);
-        todoRow.appendChild(dateCell);
        
        
        
+        //deleteButton Cell:
+        var deleteCell = document.createElement("td");
+
+        //delete Button:
+        deleteButton = document.createElement("button");
+        deleteButton.id = todoList[i].key;
+        deleteButton.innerText = "Delete";
+        deleteButton.onclick = deleteTodoItem;
+
+        deleteCell.appendChild(deleteButton);
+      
+       
+
+         //Add the cells to the row
+         todoRow.appendChild(nameCell);
+         todoRow.appendChild(dateCell);
+         todoRow.appendChild(deleteCell);
 
         //Add the row to the table
         todoListTable.appendChild(todoRow);
