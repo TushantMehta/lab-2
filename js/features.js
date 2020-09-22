@@ -108,6 +108,17 @@ function displayTodoList()  {
         deleteButton.onclick = deleteTodoItem;
 
         deleteCell.appendChild(deleteButton);
+
+        //edit cell and button:
+        var editCell = document.createElement("td");
+
+        editButton = document.createElement("button");
+        editButton.id = todoList[i].key;
+        editButton.innerText = "Edit";
+        editButton.onclick = editTodoItem;
+
+        editCell.appendChild(editButton);
+
       
        
 
@@ -115,6 +126,7 @@ function displayTodoList()  {
          todoRow.appendChild(nameCell);
          todoRow.appendChild(dateCell);
          todoRow.appendChild(deleteCell);
+         todoRow.appendChild(editCell);
 
         //Add the row to the table
         todoListTable.appendChild(todoRow);
@@ -225,6 +237,8 @@ function editTodoItem(){
                 var oldButton = document.getElementById("addButton");
                 oldButton.innerText = "Add todo Item";
                 oldButton.onclick = addTodoItem;
+
+                
             
             //console.log("position: " + todoList[i].name);
             
