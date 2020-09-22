@@ -19,5 +19,9 @@
 
 ## 0.3
     -added function deleteTodoItem() to js/features.js 
-    -added delete button to each saved task storage
+    -added delete button to each saved task in storage
     
+
+## 0.4
+    -added function editTodoItem() to js/features.js 
+    -added edit button to each saved task in storage
