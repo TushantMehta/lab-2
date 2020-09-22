@@ -149,3 +149,23 @@ function clearList() {
     clearTodoTable();
 
 }
+
+function deleteTodoItem() {
+
+
+    //Pull the JSON array from sessionStorage
+    var todoList = JSON.parse(sessionStorage.getItem('todoList'));
+    
+    for (i = 0; i < todoList.length; i++)   {
+        if (this.id == todoList[i].key)  {
+            
+            todoList.splice(i,1);
+        }
+    }    
+    //re-seralize the array    
+    //Push the todo list back to session storage
+    sessionStorage.setItem('todoList', JSON.stringify(todoList));
+
+    displayTodoList();
+
+}
