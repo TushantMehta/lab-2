@@ -183,3 +183,60 @@ function deleteTodoItem() {
     displayTodoList();
 
 }
+
+
+function editTodoItem(){
+
+    var todoList = JSON.parse(sessionStorage.getItem("todoList"));
+
+    for(var i = 0; i < todoList.length; i++){
+        if (this.id == todoList[i].key){
+            var input = document.getElementById("name");
+            var date = document.getElementById("date");
+
+            var number = i;
+            input.value = "Enter new and click Save";
+            date.value = "";
+
+           
+
+            if(input.onchange = true) {
+            if (date.onchange = true) { //console.log("hhhhhh");
+
+            var newButton = document.getElementById("addButton");
+            newButton.innerText = "Save";
+            
+            newButton.onclick = function changeInput(){
+                
+                var name = document.getElementById("name").value;
+                var date = document.getElementById("date").value;
+                todoList[number].name = name;
+                //console.log(todoList[number].name);
+                todoList[number].date = date;
+
+                //sending data to server:
+                var list = JSON.stringify(todoList);
+                sessionStorage.setItem("todoList", list);
+
+                displayTodoList();
+
+
+                //turning back the fucntion of Add todo Item:
+                var oldButton = document.getElementById("addButton");
+                oldButton.innerText = "Add todo Item";
+                oldButton.onclick = addTodoItem;
+            
+            //console.log("position: " + todoList[i].name);
+            
+            }
+
+            
+        
+        }
+
+    }
+    
+    
+ }
+}
+ }
