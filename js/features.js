@@ -131,4 +131,13 @@ function makeKey(length) {
  }
 
 
- 
+ function clearTodoTable()   {
+
+    //Clear the table
+    todoListTable = document.getElementById("todoListTable");
+
+    while (todoListTable.hasChildNodes()) {
+        todoListTable.removeChild(todoListTable.firstChild);
+    }
+
+}
