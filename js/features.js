@@ -93,8 +93,7 @@ function displayTodoList()  {
        
         
 
-        editCell.appendChild(editButton);
-
+        
 
         //Add the cells to the row
         todoRow.appendChild(nameCell);
