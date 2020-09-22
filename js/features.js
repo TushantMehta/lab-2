@@ -141,3 +141,12 @@ function makeKey(length) {
     }
 
 }
+
+function clearList() {
+    //Clear the storage
+    
+    sessionStorage.clear();
+
+    clearTodoTable();
+
+}
